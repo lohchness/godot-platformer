@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://chsbp5vxrtfpl"]
+
+[ext_resource type="PackedScene" uid="uid://dpuxbmks1b24c" path="res://scenes/wall.tscn" id="1_0pii7"]
+[ext_resource type="PackedScene" uid="uid://bckbtmbjw138" path="res://scenes/player.tscn" id="1_x0oy3"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_x0oy3")]
+position = Vector2(712, 480)
+
+[node name="Camera2D" type="Camera2D" parent="Player/Player"]
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="Wall" parent="Borders" instance=ExtResource("1_0pii7")]
+position = Vector2(0, 608)
+scale = Vector2(40, 1)
+
+[node name="Wall4" parent="Borders" instance=ExtResource("1_0pii7")]
+position = Vector2(432, 440)
+
+[node name="Wall5" parent="Borders" instance=ExtResource("1_0pii7")]
+position = Vector2(528, 488)
